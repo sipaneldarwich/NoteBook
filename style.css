@@ -1,0 +1,60 @@
+#navigation a{
+    font-size: 32px;
+    text-align: center;
+    display: block;
+    color: blue;
+    text-transform: uppercase;
+    display: block;
+}
+
+.is-hidden{
+    transition: all .05s ease-in-out; 
+    display: none;  
+}
+
+.mainTitle {
+    display: block;
+    font-size: 52px;
+}
+
+.record {
+    border-bottom: 2px solid;
+    margin-top: 15px;
+}
+
+.record:hover{
+    transition: all .05s ease-in-out; 
+    transform: scale(1.1); 
+}
+
+.record:nth-child(odd) {
+    border-left: solid rgb(107, 107, 185) 5px;
+}
+
+.record:nth-child(even) {
+    border-left: solid rgb(107, 185, 107) 5px;
+}
+
+
+.subTitle {
+    display: block;
+    font-size: 32px;
+}
+
+.explain {
+    font-style: italic;
+}
+
+.bash {
+    font-family: 'Fira Code';
+    color: black;
+    background-color: #eee;
+    font-size: 15px;
+    padding: 1px;
+}
+
+.tag span{
+    color: blue;
+    padding-right: 10px;
+    font-style: italic;
+}
