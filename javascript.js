@@ -76,4 +76,8 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
 });
-    
+
+
+
+
+// nginx icon https://www.nginx.com/wp-content/uploads/2019/10/favicon-48x48.ico

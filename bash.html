@@ -42,7 +42,13 @@
           <div class="bash">wget -qO- https://raw.githubusercontent.com/cra0zy/code-nautilus/master/install.sh | bash</div>
           <div class="tag"><span>ubuntu</span><span>vscode</span></div>
         </div>
-
+        <div class="record">
+          <div class="subTitle">Nginx permissino deneid</div>
+          <div class="explain"></div>
+          <div class="bash">find /var/www/html -type d -print0 | xargs -0 chmod 755</div>
+          <div class="bash">find /var/www/html -type f -print0 | xargs -0 chmod 644</div>
+          <div class="tag"><span>docker</span><span>nginx</span></div>
+        </div>
 
 
 
