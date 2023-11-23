@@ -18,43 +18,113 @@
   <div class="container-fluid">
     <!-- Control the column width, and how they should appear on different devices -->
     <div class="row">
-      <div id="navigation"class="col-2">
+      <div id="navigation" class="col-2">
                 
       </div>
       <div id="content" class="col-10">
         <div class="record">
+          <div class="subTitle">A WORK SHORTCUTS</div>
+          <div class="explain">cluster ids</div>
+          <div class="bash">9550414, 9568357, 9568360, 9568389, 9568392,7678828, 9568389</div><br>
+          <div class="explain">Disable Providers SQL</div>
+          <div class="bash">update providers set is_active = 0 where 1 = 1;update providers set is_active = 1 where `name` = 'BookingCom';select * from providers where is_active = 1</div><br>
+          <div class="tag"><span class="icon">work</span></div>
+        </div>
+        <div class="record">
           <div class="subTitle">Change folder ownership</div>
           <div class="explain"></div>
           <div class="bash">sudo chown -R sipan .</div>
-          <div class="tag"><span>ubuntu</span></div>
+          <div class="tag"><span class="icon">ubuntu</span></div>
         </div>
         <div class="record">
           <div class="subTitle">Docker After Install</div>
           <div class="explain">to prevent docker from asking for sudo</div>
-          <div class="bash"> sudo groupadd docker</div>
-          <div class="bash"> sudo usermod -aG docker ${USER} su -s ${USER}</div>
-          <div class="bash"> sudo chmod 666 /var/run/docker.sock</div>
-          <div class="tag"><span>ubuntu</span><span>docker</span></div>
+          <div class="bash"> sudo groupadd docker<br>
+          sudo usermod -aG docker ${USER} su -s ${USER}<br>
+          sudo chmod 666 /var/run/docker.sock</div>
+          <div class="tag"><span class="icon">docker</span></div>
         </div>
         <div class="record">
           <div class="subTitle">Add Open With Code to Ubuntu</div>
           <div class="explain"></div>
           <div class="bash">wget -qO- https://raw.githubusercontent.com/cra0zy/code-nautilus/master/install.sh | bash</div>
-          <div class="tag"><span>ubuntu</span><span>vscode</span></div>
+          <div class="tag"><span class="icon">ubuntu</span></div>
         </div>
         <div class="record">
-          <div class="subTitle">Nginx permissino deneid</div>
+          <div class="subTitle">Nginx permission deneid</div>
           <div class="explain"></div>
           <div class="bash">find /var/www/html -type d -print0 | xargs -0 chmod 755</div>
           <div class="bash">find /var/www/html -type f -print0 | xargs -0 chmod 644</div>
-          <div class="tag"><span>docker</span><span>nginx</span></div>
+          <div class="tag"><span class="icon">docker</span></div>
+        </div>
+        <div class="record record-big">
+          <div class="subTitle">SQL Misc</div>
+          <div class="explain">website to explain sql commands</div>
+          <div class="bash"><a href="https://explainmysql.com/">https://explainmysql.com/</a></div><br>
+          <div class="explain">sql Max execution Time</div>
+          <div class="bash">/*+ MAX_EXECUTION_TIME(60000) */</div>
+          <div class="tag"><span class="icon">sql</span></div>
+        </div>
+        <div class="record record-big">
+          <div class="subTitle">Git</div>
+          <div class="explain"></div>
+          <h5>HOTFIX</h5>
+            <div class="bash">
+              Neues Ticket in der aktuellen Production-Version aufmachen<br>
+              fix code<br>
+              PR-Prefix [HOTFIX] to Staging<br>
+              Hotfixbegründung muss im Ticket stehen<br>
+              CodeReview machen lassen, PM Review machen lassen
+            </div>
+          <h5>FIX</h5>
+            <div class="bash">
+              change ticket to progress<br>
+              create branch of same ticket from staging with -fix at end of the branch name<br>
+              fix code<br>
+              push with pr merge to staging<br>
+              wait for code review then pm review (just wait)<br>
+              wait merge (just wait)<br>
+            </div>
+          <h5>REVERT</h5>
+            <div class="bash">
+              branch of same ticket from staging name revert<br>
+              git revert -m 1 mergeHash //in Integration<br>
+              fix code<br>
+              git add . ; git commit -m ; git push -f<br>
+              pr merge to staging<br>
+              wait for code review then PM review<br>
+              wait merge<br>
+            </div>
+          <div class="tag"><span class="icon">git</span><span class="icon">work</span></div>
         </div>
 
 
 
 
+        <!-- TOOLS -->
+        <div class="record">
+          <div class="subTitle">JSON Tool</div>
+          <div class="explain">paste json from kibana and get formatted json</div>
+          <div>
+            <div><textarea id='jiraJsonToPHPJson_input'></textarea>
+            <textarea id='jiraJsonToPHPJson_output'></textarea></div>
+            <button id='jiraJsonToPHPJson_button'>Change Jira Json to PHP Json</textarea>
+          </div>
+          <div class="tag"><span class="icon">tools</span><span class="icon">work</span></div>
+        </div>
 
- 
+        
+        <!-- <div class="rawContent">
+          {
+            "subtitle":"subtitle11",
+            "explain":"this is test",
+            "content":"this is test1
+            sipan
+            test",
+            "tags":"this is test 3"
+          }
+        </div> -->
+        
       </div>
     </div>
 </div>
